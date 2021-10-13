@@ -1,5 +1,30 @@
 #include "minishell.h"
 
+
+char	*ft_strrchr(const char *s, int c)
+{
+	char *str;
+
+	str = NULL;
+	while (*s)
+	{
+		if (*s == c)
+			str = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (str);
+}
+
+
+int		ft_isalnum(int c)
+{
+	if ((c < 48 || c > 57) && (c < 65 || c > 90) && (c < 97 || c > 122))
+		return (0);
+	return (1);
+}
+
 int		check_name(char *name)
 {
 	int j;
@@ -9,7 +34,7 @@ int		check_name(char *name)
 	{
 		if (!ft_isalnum((int)name[j]) && name[j] != '_')
 		{
-			ft_putstr_fd("Invalid variable name\n", 1);
+			ft_putstr("Invalid variable name\n");
 			return (1);
 		}
 		j++;
@@ -36,7 +61,7 @@ int		ft_export(char **args)
 	}
 	i++;
 	value = ft_strdup(args[1] + i);
-	add_env(name, value);
+	// I have to create a function that will add to env variable ft_add_env;
 	free(name);
 	free(value);
 	return (0);

@@ -1,5 +1,7 @@
 #include "minishell.h"
 
+
+
 int		ft_env(char **args)
 {
 	t_env	*tmp;
@@ -8,10 +10,10 @@ int		ft_env(char **args)
 	tmp = g_env;
 	while (tmp)
 	{
-		ft_putstr_fd(tmp->name, 1);
-		ft_putstr_fd("=", 1);
-		ft_putstr_fd(tmp->value, 1);
-		ft_putstr_fd("\n", 1);
+		ft_putstr(tmp->name);
+		ft_putstr("=");
+		ft_putstr(tmp->value);
+		ft_putstr("\n");
 		tmp = tmp->next;
 	}
 	return (0);

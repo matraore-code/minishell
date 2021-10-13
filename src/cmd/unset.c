@@ -19,7 +19,6 @@ int		ft_unset(char **args)
 					prev->next = g_env->next;
 				else
 					save = g_env->next;
-				free_env(g_env);
 				break ;
 			}
 			prev = g_env;

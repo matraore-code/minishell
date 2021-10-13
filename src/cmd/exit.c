@@ -4,6 +4,6 @@ int		ft_exit(char **args)
 {
 	(void)args;
     // I have to free all environement stuffs
-	ft_putstr_fd("exit\n", 1);
+	ft_putstr("exit\n");
 	exit(0);
 }

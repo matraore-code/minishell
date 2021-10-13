@@ -4,12 +4,12 @@ void	print_echo(char **args, int nl, int i)
 {
 	while (args[i])
 	{
-		ft_putstr_fd(args[i], 1);
+		ft_putstr(args[i]);
 		if (args[++i])
-			ft_putstr_fd(" ", 1);
+			ft_putstr(" ");
 	}
 	if (nl)
-		ft_putstr_fd("\n", 1);
+		ft_putstr("\n");
 }
 
 int		ft_echo(char **args)
@@ -23,7 +23,7 @@ int		ft_echo(char **args)
 		count++;
 	if (count < 2)
 	{
-		ft_putstr_fd("\n", 1);
+		ft_putstr("\n");
 		return (0);
 	}
 	if (args[1][0] == '-' && ft_strncmp("-n", args[1], 3))
