@@ -29,6 +29,7 @@ int		ft_echo(char **args)
 	}
 	if (args[1][0] == '-' && ft_strncmp("-n", args[1], 3))
 		return (1);
+	//i'm trying to implement the option -n with other(s) character
 	// if (args[1][0] == '-')
 	// {
 	// 	while(args[1])
