@@ -1,10 +1,9 @@
 
 #ifndef MINISHELL_H
-# define MINISHELL
+# define MINISHELL_H
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <linux/limits.h>
 # include <string.h>
 # include <errno.h>
 # include <dirent.h>
@@ -36,10 +35,13 @@ extern t_env		*g_env;
 void    ft_putstr(char *str);
 void	ft_putchar(char c);
 void	ft_putendl(char *str);
-int	get_cwd(char **cwd);
+// int     get_cwd(char **cwd);
 
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+int		ft_echo(char **args);
+
 
 
 
