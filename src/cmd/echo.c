@@ -17,6 +17,7 @@ int		ft_echo(char **args)
 	int count;
 	int nl;
 	int i;
+	int j = 0;
 
 	count = 0;
 	while (args[count])
@@ -28,6 +29,13 @@ int		ft_echo(char **args)
 	}
 	if (args[1][0] == '-' && ft_strncmp("-n", args[1], 3))
 		return (1);
+	// if (args[1][0] == '-')
+	// {
+	// 	while(args[1])
+	// 	{
+	// 		if (ft_strcmp("n", args[1][j]))
+	// 	}
+	// }
 	nl = 1;
 	i = 1;
 	if (!ft_strncmp("-n", args[1], 3))
